@@ -1,18 +1,17 @@
-<h1>Order</h1>
-<form action="#" method="POST">
-  <label>First Name</label>
-  <input name="firstName" type="text" placeholder="e.g Luca" />
-  <br />
-  <br />
-  <label>Last Name</label>
-  <input name="lastName" type="text" placeholder="e.g Popescu" />
-  <br />
-  <br />
-  <label>Address</label>
-  <input name="address" type="text" />
-  <br />
-  <br />
-  <label>Products</label>
-  <input name="product" type="text" placeholder="Tomatoes Bread Salad" />
-  <input type="submit" />
-</form>
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{
+            url_for('static',filename='index.css')}}">    </head>
+    <body>
+       <a href="/order"><button>Order</button></a>
+       <a href="/signup"><button>Sign Up</button></a>
+       <a href="/login"><button>Log in</button></a>
+        
+    </body>
+</html>

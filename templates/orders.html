@@ -1,1 +1,59 @@
-<h3>{{ orders }}</h3>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Help for the elders</title>
+  </head>
+  <br />
+  <br />
+  <br />
+  <div class="container">
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="search_city">City</label>
+        <input type="text" class="form-control" name="search_city" />
+        <br />
+        <button type="submit" class="btn btn-primary">
+          Search
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Address</th>
+          <th>Products</th>
+          <th>City</th>
+          <th></th>
+        </tr>
+      </thead>
+      {% for order in orders %}
+      <tbody>
+        <tr>
+          <td>{{ order.id }}</td>
+          <td>{{ order.firstname }}</td>
+          <td>{{ order.lastname }}</td>
+          <td>{{ order.addres }}</td>
+          <td>{{ order.products }}</td>
+          <td>{{ order.city}}</td>
+          <td><button class="btn btn-warning" >Confirm</button></td>
+        </tr>
+      </tbody>
+
+      {% endfor %}
+    </table>
+    <br />
+    <a href="/orders" style="float: right;">
+      <h5>All orders ></h5>
+    </a>
+  </div>
+</html>
